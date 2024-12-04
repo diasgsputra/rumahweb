@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "1d256a24-4807-4608-8422-4f70792b7434",
+		"name": "Rumah web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16793602"
+	},
+	"item": [
+		{
+			"name": "Get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9002/product",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTczMzI4MzA0MywiZXhwIjoxNzMzMjg2NjQzfQ.gTEPcvqgkk35HyHLB0WGYNz2jLxy0dTtbB3RDh2Vves",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"item_name\": \"Pensil\",\r\n    \"quantity\": 5,\r\n    \"price\": 2000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9002/product",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTczMzI4MzYzMywiZXhwIjoxNzMzMjg3MjMzfQ._I_civp_1I-1lBfOrUht3ogWTglN2BV1xceTrbYGyLU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"item_name\": \"Pulpen\",\r\n    \"quantity\": 10,\r\n    \"price\": 5000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9002/product/2",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update product Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTczMzI4MzYzMywiZXhwIjoxNzMzMjg3MjMzfQ._I_civp_1I-1lBfOrUht3ogWTglN2BV1xceTrbYGyLU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9002/product/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"product",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"budi\",\r\n    \"password\": \"tes123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9002/auth/registration",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"auth",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"budi\",\r\n    \"password\": \"tes123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9002/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
